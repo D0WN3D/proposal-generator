@@ -3,15 +3,15 @@ var Bitcore = require('bitcore-lib-dash');
 var socket;
 var paymentCycle;
 
-var mainnetProvider = 'https://insight.dashevo.org';
+var mainnetProvider = 'https://insight.gobyte.network';
 var mainnetPrefix = '/insight-api-dash';
 
-var testnetProvider = 'https://testnet-insight.dashevo.org';
+var testnetProvider = 'https://testnet-insight.gobyte.network';
 var testnetPrefix = '/insight-api-dash';
 
 var init = function(network, provider, prefix) {
     var gov = new Bitcore.GovObject.Proposal();
-    gov.network = network || 'mainnet';
+    gov.network = network || 'testnet';
 
     paymentCycle = new PaymentCycle(gov, provider, prefix);
 
